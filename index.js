@@ -2,7 +2,7 @@ var http  = require('http');
 
 const PORT=8080; 
 //const SERVER = Math.random();
-const SERVER = "Server";
+const SERVER = Math.random();
 
 //We need a function which handles requests and send response
 function handleRequest(request, response){
