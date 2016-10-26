@@ -7,7 +7,7 @@ var i =0;
 //We need a function which handles requests and send response
 function handleRequest(request, response){
     i++;
-    response.end('It Works!! Path Hit: ' + request.url + ": SERVER: " + SERVER + "\n" + Date.now + "\n" + i );
+    response.end('It Works!! Path Hit: ' + request.url + ": SERVER: " + SERVER + "\n" + new Date().toLocaleString() + "\n" + i );
 }
 var server = http.createServer(handleRequest);
 server.listen(PORT, function(){
