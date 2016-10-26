@@ -3,10 +3,11 @@ var http  = require('http');
 const PORT=8080; 
 //const SERVER = Math.random();
 const SERVER = Math.random();
-
+var i =0;
 //We need a function which handles requests and send response
 function handleRequest(request, response){
-    response.end('It Works!! Path Hit: ' + request.url + ": SERVER: " + SERVER);
+    i++;
+    response.end('It Works!! Path Hit: ' + request.url + ": SERVER: " + SERVER + "\n" + Date.now + "\n" + i );
 }
 var server = http.createServer(handleRequest);
 server.listen(PORT, function(){
